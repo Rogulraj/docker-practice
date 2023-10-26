@@ -1,0 +1,10 @@
+version: "3"
+services:
+  node-img-1:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+      args:
+        - REACT_APP_NAME=Production
+    ports:
+      - "8080:80"

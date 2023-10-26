@@ -1,0 +1,10 @@
+version: "3"
+services:
+  node-img-1:
+    build: .
+    ports:
+      - "4000:3000"
+    volumes:
+      - ./src:/app/src:ro
+    env_file:
+      - ./.env
